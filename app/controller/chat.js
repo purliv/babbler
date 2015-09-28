@@ -16,6 +16,7 @@ chatApp.controller('chatController', ['$scope', '$http', 'logonInfoService',
 				password: $scope.logonInfo.password
 			}).success(function(data, status, headers, config) {
 				$scope.logonInfo.data.isLogged = true;
+                $scope.logonInfo.data.password = '';
 				$scope.logonInfo.save();
 			}).error(function(data, status, headers, config) {
 				alert(status);

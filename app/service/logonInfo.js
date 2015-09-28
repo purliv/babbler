@@ -6,8 +6,9 @@ chatApp.factory('logonInfoService', [
 		return {
 			data: {
 				isLogged: false,
-				usenName: '',
-				friendlyName: ''
+				userName: '',
+                password: '',
+				alterEgo: ''
 			},
 			load: function() {
 				var stored = window.sessionStorage.getItem('logonInfo');
