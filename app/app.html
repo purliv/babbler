@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- external libraries -->
+    <script src="/lib/jquery/jquery.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="/lib/angular/angular.js"></script>
+
+    <!-- custom modules -->
+    <script src="app.js"></script>
+    <!-- services -->
+    <script src="service/settings.js"></script>
+    <script src="service/logonInfo.js"></script>
+    <!-- controllers -->
+    <script src="controller/chat.js"></script>
+
+    <title>Babbler!</title>
+</head>
+<body ng-controller="chatController">
+    <div ng-include="view.login" ng-if="!logonInfo.data.isLogged"></div>
+    <div ng-include="view.main" ng-if="logonInfo.data.isLogged"></div>
+</body>
+</html>

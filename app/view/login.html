@@ -1,0 +1,17 @@
+<div class="panel panel-primary" style="width: 400px; margin-left: auto; margin-right: auto; margin-top: 50px">
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-log-in large" style="margin-right: 5px" aria-hidden="true"></span>
+        Autentificare
+    </div>
+    <div class="panel-body">
+        <div class="input-group" style="margin-bottom: 10px">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" ng-model="logonInfo.username" class="form-control" placeholder="Nume" />
+        </div>
+        <div class="input-group" style="margin-bottom: 15px">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password" ng-model="logonInfo.password" class="form-control" placeholder="Parolă" />
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="onLogin()">Logare</button>
+    </div>
+</div>
