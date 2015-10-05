@@ -1,5 +1,8 @@
-.controlWidth {
-    width: 800px
+.chatWidth {
+    width: 500px;
+}
+.chatHeight {
+    height: 600px;
 }
 .toTheRight {
     float: right;
@@ -20,6 +23,32 @@
 .lmarg10 {
     margin-left: 10px;
 }
+.tmarg5 {
+    margin-top: 5px;
+}
+.tmarg10 {
+    margin-top: 10px;
+}
 .grayed {
     color: #999999;
+}
+.popover {
+    position: relative;
+    display: block;
+    margin: 10px;
+    min-width: 260px;
+}
+.stamp-right {
+    font-size: 11px;
+    color: #999999;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    float: right;
+}
+.stamp-left {
+    font-size: 11px;
+    color: #999999;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    float: left;
 }
