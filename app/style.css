@@ -3,9 +3,7 @@
 }
 .chatHeight {
     height: 600px;
-}
-.toTheRight {
-    float: right;
+    overflow: auto;
 }
 .avatar {
     width: 40px;
@@ -51,4 +49,10 @@
     margin-left: 5px;
     margin-bottom: 2px;
     float: left;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
 }

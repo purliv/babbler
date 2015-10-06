@@ -8,7 +8,8 @@ chatApp.controller('chatController', ['$scope', '$http', '$templateCache', '$sce
 			login: '/view/login.html'
 		};
 		$scope.chat = {
-			messages: '',
+            rawMessages: '',
+			sceMessages: '',
 			messageTemplate: ''
 		};
 		$scope.loadResources = function() {
@@ -37,14 +38,13 @@ chatApp.controller('chatController', ['$scope', '$http', '$templateCache', '$sce
 			$('.chatWidth').css('width', Math.min(Math.max(width + 100 * direction, 400), 1200) + 'px');
 		};
 		$scope.clickTestMessage = function(isKing) {
-			var message = $scope.chat.messageTemplate
+			$scope.chat.rawMessages += $scope.chat.messageTemplate
 				.replace('[popover side]', isKing ? 'left' : 'right')
-				.replace('[float side]', isKing ? 'toTheRight' : '')
-				.replace('[player name]', isKing ? 'Liviu' : 'Alina')
+				.replace('[float side]', isKing ? 'right' : 'left')
 				.replace('[initial message]', isKing ? 'salut bebitzaaa!' : 'salut bebitzuuu!')
 				.replace('[timestamp side]', isKing ? 'right' : 'left')
 				.replace('[timestamp]', '12:02');
-			$scope.chat.messages = $sce.trustAsHtml($scope.chat.messages + message);
+			$scope.chat.sceMessages = $sce.trustAsHtml($scope.chat.rawMessages);
 		};
 		$scope.loadResources();
 	}
