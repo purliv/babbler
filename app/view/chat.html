@@ -4,7 +4,7 @@
             <div class="avatar icon-user-default inlineDiv"></div>
             <div class="inlineDiv lmarg10">
                 <div class="panel-title">
-                    Alina <span class="grayed">(intr-o dunga verde)</span>
+                    Alina <span class="grayed">(cu pisici)</span>
                 </div>
                 <div class="grayed">last seen yesterday at 18:45</div>
             </div>
@@ -13,40 +13,12 @@
             <div ng-bind-html="chat.sceMessages"></div>
         </div>
         <div class="panel-footer">
-            <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="clickTestMessage(true)">
-                <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="clickTestMessage(false)">
-                <span class="glyphicon glyphicon-queen" aria-hidden="true"></span>
-            </button>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="chat.typedMessage" ng-keydown="keyDownOnMessageInput($event)">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">@</button>
+                </span>
+            </div>
         </div>
     </div>
 </div>
-
-<!--
-cum era cand mergea
-
-            <div class="popover right" style="float: left;">
-                <div class="arrow"></div>
-                <h3 class="popover-title">Alina</h3>
-                <div class="popover-content">
-                    <div>
-                        Maine merg la asigurator sa fac si o la sa ci constatarea apoi duc masina in service!
-                    </div>
-                    <div class="tmarg10">
-                        Sper sa nu imi ia mult...
-                    </div>
-                </div>
-                <div class="stamp-left">11:59</div>
-            </div>
-            <div class="popover left" style="float: right;">
-                <div class="arrow"></div>
-                <h3 class="popover-title">Liviu</h3>
-                <div class="popover-content">
-                    Bine, succes!
-                </div>
-                <div class="stamp-right">12:03</div>
-            </div>
-
-
--->

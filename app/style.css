@@ -56,3 +56,10 @@
 .float-right {
     float: right;
 }
+.seen-rigth {
+    font-size: 11px;
+    color: #00BB00;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    float: right;
+}
